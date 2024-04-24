@@ -1,0 +1,44 @@
+{% extends 'base.html' %}
+{% block content %}
+
+    <div class="row">
+        <div class="col-12 col-sm-12 col-md-3">
+            <h1>Добавление книги</h1>
+            <form action="{% url 'books:addrec' %}" method="post">
+                {% csrf_token %}
+                <label for="">Наименование</label>
+                <br>
+                <br>
+                <input type="text" name="name">
+                <br>
+                <br>
+                <label for="">Заголовок</label>
+                <br>
+                <br>
+                <input type="text" name="title">
+                <br>
+                <br>
+                <label for="">Автор</label>
+                <br>
+                <br>
+                <input type="text" name="author">
+                <br>
+                <br>
+                <label for="">Описание</label>
+                <br>
+                <br>
+                <input type="text" name="description">
+                <br>
+                <br>
+                <label for="">Цена</label>
+                <br>
+                <br>
+                <input type="text" name="price">
+                <br>
+                <br>
+                <button type="submit" id="new">Применить</button>
+            </form>
+        </div>
+    </div>
+
+{% endblock %}
